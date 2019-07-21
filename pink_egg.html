@@ -1,0 +1,119 @@
+<html>
+ <head>
+   <title>Sujeong Magic 8 ball</title>
+   <script type="text/javascript">
+   //we define answers
+
+   var answers = ["It is certain",
+                  "It is deciedly so",
+                  "Without a doubt",
+                  "Yes - definitely",
+                   "You may rely on it", 
+                   "As I see it, yes", 
+                   "Most likely", 
+                   "Outlook good", 
+                   "Yes", "Signs point to yes",
+                   "Don't count on it", 
+                   "My reply is no",
+                   "My sources say no", 
+                   "Outlook not so good",
+                   "Very doubtful", 
+                   "Reply hazy, try again", 
+                   "Ask again later", 
+                   "Better not tell you now",
+                   "Cannot predict now", 
+                   "Concentrate and ask again"];
+    
+    window.onload = function(){
+      var pinkg = document.getElementById("pinkg");
+      var answer = document.getElementById("answer");
+      var pink_egg= document.getElementById("pink_egg");
+      var question = document.getElementById("question");
+      
+      pink_egg.addEventListener("click", function(){
+        if(question.value.length < 1){
+          alert('Enter a question!')
+          }
+          else{
+            pinkg.innerText="";
+            var num = Math.floor(Math.random() * Math.floor(answers.length));
+            answer.innerText = answers[num];
+        }
+      });
+    };
+    </script>
+   
+   <style type="text/css">
+    h1 {font-weight:100; font-size:2.5em;}
+
+  #content {width:600px; 
+            margin: 0 auto;
+            margin-top:50px;
+            border: 1px dotted navy; 
+            text-align:center;
+            font-family: 'Helvetica Neue', airal; 
+            font-weight: 100;
+          }
+
+   div.pink_egg {
+     background-color: pink;
+     border: 1px, solid blue;
+     border-radius: 50%;
+     width: 300px;
+     height:300px;
+     margin: 0 auto;
+     margin-bottom: 30px;
+     margin-top: 30px;
+    }
+
+    div.answer {
+        background-color: pink;
+        border: 1px solid palevioletred;
+        border-radius: 50%;
+        width: 50%;
+        height: 50%;
+        margin: 25% auto;
+    }
+    
+    p#pinkg{
+        font-size: 2em;
+        margin: 20% auto;
+        color: rgb(56, 29, 34);
+    }
+    p#answer {
+      padding:23px;
+      color: black;
+      letter-spacing: 2px;
+      font-size:18px;
+    }
+
+    #question
+    { 
+        margin: 20px;
+        padding: 10px;
+        width: 400px;
+        font-size:22px;
+    }
+    
+    #info {
+      font-size: 22px;
+    }
+
+    </style>
+
+
+ </head>
+ <body>
+   <div id ="content">
+    <h1>Magic <em>pink_egg</em> on SUJEONG'S Channel</h1>
+    <p><em>Ask me you want to know and click on the <strong>pink_egg</strong></em></p>
+    <input type="text" id="question"/>
+    <div id="pink_egg" class="pink_egg">
+     <div class="answer">
+       <p id="pinkg"><i>pink_egg</i></p>
+       <p id="answer"></p>
+     </div>
+    </div>
+   </div>
+ </body>
+</html>
