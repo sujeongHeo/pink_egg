@@ -3,4 +3,4 @@ Apps to reduce anxiety
 
 
 
-![Alt text](/home/heosujeong/Pictures/today/pink.png?raw=true "Title")
+![Alt text](pink_egg/pink.png?raw=true "Title")
